@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center py-5">
+  <h2>Thank you! 🎉</h2>
+  <p>Your order <strong>#{{ order.id }}</strong> was placed successfully.</p>
+  <p><strong>Payment Method:</strong> {{ order.payment_method }} — Please keep cash ready at delivery.</p>
+  <a href="/" class="btn btn-primary mt-3">Continue Shopping</a>
+</div>
+{% endblock %}

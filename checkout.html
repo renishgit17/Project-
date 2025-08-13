@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Checkout</h3>
+<p><strong>Payment Method:</strong> Cash on Delivery (COD)</p>
+<form method="post" class="row g-3">
+  {% csrf_token %}
+  <div class="col-md-6">{{ form.full_name.label_tag }} {{ form.full_name }}</div>
+  <div class="col-md-6">{{ form.email.label_tag }} {{ form.email }}</div>
+  <div class="col-12">{{ form.address.label_tag }} {{ form.address }}</div>
+  <div class="col-md-4">{{ form.city.label_tag }} {{ form.city }}</div>
+  <div class="col-md-4">{{ form.state.label_tag }} {{ form.state }}</div>
+  <div class="col-md-4">{{ form.postal_code.label_tag }} {{ form.postal_code }}</div>
+  <div class="col-md-6">{{ form.country.label_tag }} {{ form.country }}</div>
+  <div class="col-12 text-end">
+    <button class="btn btn-success btn-lg">Place Order (COD)</button>
+  </div>
+</form>
+{% endblock %}
